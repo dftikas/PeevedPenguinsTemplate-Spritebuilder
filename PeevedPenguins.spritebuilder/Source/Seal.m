@@ -10,7 +10,8 @@
 
 @implementation Seal
 
-- (id)init {
+/*this is for the test
+ - (id)init {
     self = [super init];
     
     if (self) {
@@ -19,5 +20,6 @@
     
     return self;
 }
+*/
 
 @end
