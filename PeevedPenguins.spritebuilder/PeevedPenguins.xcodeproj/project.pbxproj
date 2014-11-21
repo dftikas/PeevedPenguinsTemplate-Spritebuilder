@@ -207,9 +207,9 @@
 				B737893C1807616C0076A88C /* Source */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
-				B77F1CCF17B978D8009739AE /* Supporting Files */,
 				B77F1B3017B978D7009739AE /* Frameworks */,
 				B77F1B2F17B978D7009739AE /* Products */,
+				B77F1CCF17B978D8009739AE /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
