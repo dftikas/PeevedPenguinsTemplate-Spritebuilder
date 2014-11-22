@@ -5,9 +5,9 @@
 //  Created by Δημήτρης Φτίκας on 21/11/14.
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
-
-#import "Gameplay.h"
 #import <UIKit/UIKit.h>
+#import "Gameplay.h"
+
 
 @implementation Gameplay {
     CCPhysicsNode *_physicsNode;
