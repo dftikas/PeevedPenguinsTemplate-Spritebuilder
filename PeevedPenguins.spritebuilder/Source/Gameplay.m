@@ -12,11 +12,20 @@
 @implementation Gameplay {
     CCPhysicsNode *_physicsNode;
     CCNode *_catapultArm;
+    CCNode *_catapult;
     CCNode *_levelNode;
     CCNode *_contentNode;
+    CCPhysicsJoint *_catapultJoint;
+    
     CCNode *_pullbackNode;
+    CCPhysicsJoint *_pullbackJoint;
     CCNode *_mouseJointNode;
     CCPhysicsJoint *_mouseJoint;
+    
+    //PenguinWithBlock *_currentPenguin;
+    CCPhysicsJoint *_penguinCatapultJoint;
+    
+    CCAction *_followPenguin;
 }
 
 // is called when CCB file has completed loading
@@ -57,27 +66,6 @@
     _mouseJointNode.position = touchLocation;
 }
 
-- (void)releaseCatapult {
-    if (_mouseJoint != nil)
-    {
-        // releases the joint and lets the catapult snap back
-        [_mouseJoint invalidate];
-        _mouseJoint = nil;
-    }
-}
-
--(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    // when touches end, meaning the user releases their finger, release the catapult
-    [self releaseCatapult];
-}
-
--(void) touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    // when touches are cancelled, meaning the user drags their finger off the screen or onto something else, release the catapult
-    [self releaseCatapult];
-}
-
 - (void)launchPenguin {
     // loads the Penguin.ccb we have set up in Spritebuilder
     CCNode* penguin = [CCBReader load:@"Penguin"];
@@ -98,6 +86,29 @@
     CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
     [_contentNode runAction:follow];
 }
+
+-(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    // when touches end, meaning the user releases their finger, release the catapult
+    [self releaseCatapult];
+}
+
+-(void) touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    // when touches are cancelled, meaning the user drags their finger off the screen or onto something else, release the catapult
+    [self releaseCatapult];
+}
+
+
+- (void)releaseCatapult {
+    if (_mouseJoint != nil)
+    {
+        // releases the joint and lets the catapult snap back
+        [_mouseJoint invalidate];
+        _mouseJoint = nil;
+    }
+}
+
 
 - (void)retry {
     // reload this level
