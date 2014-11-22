@@ -45,7 +45,7 @@
     _mouseJointNode.physicsBody.collisionMask = @[];
 }
 
--(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+/*-(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint touchPoint = [_contentNode locationInNode:touch];
     
@@ -59,7 +59,7 @@
         _mouseJoint = [CCPhysicsJoint connectedSpringJointWithBodyA:_mouseJointNode.physicsBody bodyB:_catapultArm.physicsBody anchorA:ccp(0, 0) anchorB:ccp(34, 138) restLength:0.f stiffness:3000.f damping:150.f];
     }
 }
-
+*/
 - (void)touchMoved:(CCTouch *)touch withEvent:(UIEvent *)event
 {
     // whenever touches move, update the position of the mouseJointNode to the touch position
