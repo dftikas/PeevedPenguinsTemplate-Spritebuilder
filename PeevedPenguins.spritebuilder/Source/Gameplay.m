@@ -45,15 +45,15 @@
     _mouseJointNode.physicsBody.collisionMask = @[];
 }
 
--(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+-(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    CGPoint touchPoint = [touch locationInNode:_contentNode];
+    CGPoint touchLocation = [touch locationInNode:_contentNode];
     
     // start catapult dragging when a touch inside of the catapult arm occurs
-    if (CGRectContainsPoint([_catapultArm boundingBox], touchPoint))
+    if (CGRectContainsPoint([_catapultArm boundingBox], touchLocation))
     {
         // move the mouseJointNode to the touch position
-        _mouseJointNode.position = touchPoint;
+        _mouseJointNode.position = touchLocation;
         
         // setup a spring joint between the mouseJointNode and the catapultArm
         _mouseJoint = [CCPhysicsJoint connectedSpringJointWithBodyA:_mouseJointNode.physicsBody bodyB:_catapultArm.physicsBody anchorA:ccp(0, 0) anchorB:ccp(34, 138) restLength:0.f stiffness:3000.f damping:150.f];
