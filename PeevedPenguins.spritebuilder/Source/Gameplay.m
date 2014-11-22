@@ -1,4 +1,4 @@
-/*
+
 //
 //  Gameplay.m
 //  PeevedPenguins
@@ -45,7 +45,7 @@
     _mouseJointNode.physicsBody.collisionMask = @[];
 }
 
--(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+-(void) touchBegan:(CCTouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint touchLocation = [touch locationInNode:_contentNode];
     
@@ -60,7 +60,7 @@
     }
 }
 
-- (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)touchMoved:(CCTouch *)touch withEvent:(UIEvent *)event
 {
     // whenever touches move, update the position of the mouseJointNode to the touch position
     CGPoint touchLocation = [touch locationInNode:_contentNode];
@@ -118,7 +118,8 @@
 
 
 @end
-*/
+
+/*
 
 //
 //  Gameplay.m
@@ -189,12 +190,16 @@ static const float MIN_SPEED = 5.f;
         // after snapping rotation is fine
         _currentPenguin.physicsBody.allowsRotation = YES;
         _currentPenguin.launched = YES;
+  
         
+    
         CGRect uiPointsBoundingBox = CGRectMake(0, 0, self.boundingBox.size.width, self.boundingBox.size.height);
         // follow the flying penguin
         _followPenguin = [CCActionFollow actionWithTarget:_currentPenguin worldBoundary:uiPointsBoundingBox];
         [_contentNode runAction:_followPenguin];
     }
+    
+    
 }
 
 - (void)sealRemoved:(CCNode *)seal {
@@ -219,10 +224,10 @@ static const float MIN_SPEED = 5.f;
     CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
     [_contentNode runAction:actionMoveTo];
 }
-
+    
 #pragma mark - Touch Handling
 
-- (void)touchBegan:(CCTouch *)touch withEvent:(UIEvent *)event {
+- (void) touchBegan:(CCTouch *)touch withEvent:(UIEvent *)event {
     CGPoint touchLocation = [touch locationInNode:_contentNode];
     
     // start catapult dragging when a touch inside of the catapult arm occurs
@@ -311,3 +316,4 @@ static const float MIN_SPEED = 5.f;
 }
 
 @end
+*/
