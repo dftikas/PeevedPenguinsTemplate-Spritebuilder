@@ -8,6 +8,7 @@
 //
 #import <UIKit/UIKit.h>
 #import "Gameplay.h"
+#import "CCPhysics+ObjectiveChipmunk.h"
 
 
 @implementation Gameplay {

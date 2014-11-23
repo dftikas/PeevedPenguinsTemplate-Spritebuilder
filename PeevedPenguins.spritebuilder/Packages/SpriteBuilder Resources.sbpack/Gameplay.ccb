@@ -93,7 +93,7 @@
 					<string>Point</string>
 					<key>value</key>
 					<array>
-						<real>0.0</real>
+						<real>7.1054273576010019e-15</real>
 						<real>14</real>
 					</array>
 				</dict>
@@ -183,8 +183,8 @@
 					<string>Position</string>
 					<key>value</key>
 					<array>
-						<real>229.6341552734375</real>
-						<real>113.32280731201172</real>
+						<real>230.95889282226562</real>
+						<real>109.34856414794922</real>
 						<integer>0</integer>
 						<integer>0</integer>
 						<integer>0</integer>
@@ -221,8 +221,8 @@
 					<string>Point</string>
 					<key>value</key>
 					<array>
-						<real>7.8880000114440918</real>
-						<real>5.5100002288818359</real>
+						<real>8.5503692626953125</real>
+						<real>5.5100021362304688</real>
 					</array>
 				</dict>
 				<dict>
@@ -391,6 +391,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -496,8 +498,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>242.74615478515625</real>
-											<real>196.31280517578125</real>
+											<real>243.40852355957031</real>
+											<real>192.33856201171875</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1185,8 +1187,6 @@
 										</array>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>
