@@ -47,7 +47,7 @@
     _mouseJointNode.physicsBody.collisionMask = @[];
 }
 
--(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+-(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint touchLocation = [touch locationInNode:_contentNode];
     
@@ -62,7 +62,7 @@
     }
 }
 
-- (void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+- (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
     // whenever touches move, update the position of the mouseJointNode to the touch position
     CGPoint touchLocation = [touch locationInNode:_contentNode];
@@ -78,13 +78,13 @@
     }
 }
 
--(void) touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+-(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
     // when touches end, meaning the user releases their finger, release the catapult
     [self releaseCatapult];
 }
 
--(void) touchCancelled:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+-(void) touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
     // when touches are cancelled, meaning the user drags their finger off the screen or onto something else, release the catapult
     [self releaseCatapult];
