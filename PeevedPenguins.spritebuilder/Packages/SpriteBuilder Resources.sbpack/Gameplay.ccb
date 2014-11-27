@@ -93,7 +93,7 @@
 					<string>Point</string>
 					<key>value</key>
 					<array>
-						<real>7.5495165674510645e-15</real>
+						<real>7.1054273576010019e-15</real>
 						<real>14</real>
 					</array>
 				</dict>
@@ -1226,8 +1226,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>10.679413795471191</real>
-											<real>96.114723205566406</real>
+											<real>115.67941284179688</real>
+											<real>184.11471557617188</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1264,15 +1264,21 @@
 										<string>ScaleLock</string>
 										<key>value</key>
 										<array>
-											<real>1</real>
-											<real>1</real>
+											<real>405056.25</real>
+											<real>275382.375</real>
 											<false/>
 											<integer>0</integer>
 										</array>
 									</dict>
+									<dict>
+										<key>name</key>
+										<string>rotation</string>
+										<key>type</key>
+										<string>Degrees</string>
+										<key>value</key>
+										<real>-72.692962646484375</real>
+									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 						</array>
 						<key>customClass</key>
