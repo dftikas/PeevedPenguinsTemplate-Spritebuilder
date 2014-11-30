@@ -21,7 +21,7 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- 
+ */
 
 #import "cocos2d.h"
 
@@ -65,7 +65,7 @@
 }
 
 @end
-*/
+
 
 /*
  * SpriteBuilder: http://www.spritebuilder.org
@@ -92,7 +92,7 @@
  * THE SOFTWARE.
  */
 
-#import "cocos2d.h"
+/*#import "cocos2d.h"
 
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
@@ -125,3 +125,4 @@
 }
 
 @end
+*/
