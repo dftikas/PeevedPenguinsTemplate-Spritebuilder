@@ -21,8 +21,7 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- */
-
+ 
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
@@ -39,12 +38,12 @@
     NSMutableDictionary* cocos2dSetup = [NSMutableDictionary dictionaryWithContentsOfFile:configPath];
     
     // Note: this needs to happen before configureCCFileUtils is called, because we need apportable to correctly setup the screen scale factor.
-/*#ifdef APPORTABLE
+#ifdef APPORTABLE
     if([cocos2dSetup[CCSetupScreenMode] isEqual:CCScreenModeFixed])
         [UIScreen mainScreen].currentMode = [UIScreenMode emulatedMode:UIScreenAspectFitEmulationMode];
     else
         [UIScreen mainScreen].currentMode = [UIScreenMode emulatedMode:UIScreenScaledAspectFitEmulationMode];
-#endif*/
+#endif
     
     // Configure CCFileUtils to work with SpriteBuilder
     [CCBReader configureCCFileUtils];
@@ -65,7 +64,7 @@
 }
 
 @end
-
+*/
 
 /*
  * SpriteBuilder: http://www.spritebuilder.org
@@ -92,7 +91,7 @@
  * THE SOFTWARE.
  */
 
-/*#import "cocos2d.h"
+#import "cocos2d.h"
 
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
@@ -105,12 +104,12 @@
     
     // Configure Cocos2d with the options set in SpriteBuilder
     NSMutableDictionary *cocos2dSetup = [NSMutableDictionary dictionaryWithContentsOfFile:[[CCFileUtils sharedFileUtils]fullPathFromRelativePath:@"configCocos2d.plist"]];
-    
+/*
 #ifdef ANDROID
     if([cocos2dSetup[CCSetupScreenMode] isEqual:CCScreenModeFixed])
         [UIScreen mainScreen].currentMode = [UIScreenMode emulatedMode:UIScreenAspectFitEmulationMode];
     // else (defaults to native)
-#endif
+#endif*/
     
     // Do any extra configuration of Cocos2d here (the example line changes the pixel format for faster rendering, but with less colors)
     //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];
@@ -125,4 +124,3 @@
 }
 
 @end
-*/
