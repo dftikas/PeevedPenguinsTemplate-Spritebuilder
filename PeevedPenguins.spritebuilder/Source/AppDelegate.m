@@ -112,7 +112,7 @@
 #endif*/
     
     // Do any extra configuration of Cocos2d here (the example line changes the pixel format for faster rendering, but with less colors)
-    //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];
+    [cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCSetupPixelFormat];
     
     [self setupCocos2dWithOptions:cocos2dSetup];
     
