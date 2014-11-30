@@ -46,7 +46,7 @@
     _mouseJointNode.physicsBody.collisionMask = @[];
 }
 
--(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+-(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint touchLocation = [touch locationInNode:_contentNode];
     
